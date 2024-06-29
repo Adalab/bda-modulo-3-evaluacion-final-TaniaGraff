@@ -59,7 +59,7 @@ print('.....................................................')
 
 #Llamo a la función para eliminar las dos columnas que tienen más de un 85% de nulos.
 print('El DataFrame del HISTORIAL CLIENTES sin las columnas con más de un 85 por ciento de nulos queda así:\n')
-soporte.eliminar_columnas(df_historial_clientes, columnas_nulos_numericos)
+soporte.eliminar_columnas_nulos(df_historial_clientes, columnas_nulos_numericos)
 print(df_historial_clientes.columns)
 print('.....................................................')
 
@@ -96,6 +96,10 @@ print('.....................................................')
 print('Los duplicados del DataFrame resultante son:')
 soporte.duplicados(df_clientes)
 
+#Llamo a la función para eliminar la columna Country que tiene un único valor.
+soporte.eliminar_columnas(df_clientes, 'Country')
+print(df_clientes.columns)
+
 #Llamo a la función para igualar nombres columnas.
 soporte.igualar_columnas(df_clientes)
 print(df_clientes.columns)
@@ -113,7 +117,7 @@ registro de sus vuelos.
 El DataFrame CLIENTES es un DataFrame que no contiene valores nulos, que presenta 
 valores duplicados pero que esos valores duplicados tienen un sentido (ya que se 
 está analizando la actividad de los clientes que forman parte del programa de 
-fidelización) y que tiene un total de 405624 registros y 23 columnas.""")
+fidelización) y que tiene un total de 405624 registros y 22 columnas.""")
 
 #Llamo a la función para guardar el DF CLIENTES resultante en la carpeta output_data.
 soporte.guardar_df(df_clientes, 'customer_combined')

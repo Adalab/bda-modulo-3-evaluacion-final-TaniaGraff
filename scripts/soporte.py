@@ -69,7 +69,7 @@ def distribucion_valores (df, columnas):
 
 """Creo función para eliminar las columnas Cancellation Year y Cancellation Month ya que tienen un 88% de nulos.
 """
-def eliminar_columnas(df, columnas):
+def eliminar_columnas_nulos(df, columnas):
     for columna in columnas:
         if columna in df.columns:
             porcentaje_nulos = df[columna].isnull().mean() * 100
@@ -82,7 +82,6 @@ def eliminar_columnas(df, columnas):
             print(f"La columna '{columna.upper()}' no existe en el DataFrame.")
 
     return df
-
 
 """Creo función para que no haya números negativos en la columna Salary.
 """
@@ -126,6 +125,12 @@ def igualar_columnas(df):
 def cambiar_tipo(df, columna):
     df[columna]=df[columna].astype(float)
     return df
+
+"""Creo función para eliminar columna 'Country' que solo tiene un valor.'
+"""
+def eliminar_columnas(df, columna):
+    df.drop(columna, axis=1, inplace=True)
+
 
 """Creo función para guardar el DF resultante en la carpeta output_data.
 """
