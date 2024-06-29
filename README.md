@@ -1,5 +1,5 @@
 # Evaluación Final Módulo 3 
-## Análisis exploratorio de los datos de los clientes de una compañía de vuelos.
+## Análisis exploratorio de los datos de los clientes de una compañía aérea.
 **Tania Graff** | Promo A Part Time
 
 En esta evaluación, se ha automatizado la primera fase del proceso de Transformación y Limpieza de datos para crear un archivo CSV combinado llamado 'customer_combined', utilizando como fuente dos archivos CSV
@@ -16,12 +16,12 @@ customer_combined.csv
 - main.py: Script principal que ejecuta la automatización del proceso ETL.
 - soporte.py: Archivo de soporte donde se definen las funciones utilizadas en el proceso ETL.
 
-Para ejecutar el 
-
 **Jupyternotes**
+
 Jupyter Notebook utilizado para realizar visualizaciones, análisis exploratorios avanzados y A/B testing.
 
 **MD**
+
 Archivos markdown:
 - Enunciados de los ejercicios de la evaluación.
 - README.md (este archivo).
