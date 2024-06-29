@@ -17,15 +17,23 @@ def leer_csv(ruta_csv):
     pd.set_option('display.max_columns', None)
     return df
 
+"""Creo función para ver la info de los DF.
+"""
+def info_df(df):
+    return df.info()
+
 """Creo función para ver forma de los DF.
 """
 def forma_df(df):
     print(f"El DataFrame tiene {df.shape[0]} filas y {df.shape[1]} columnas.")
 
-"""Creo función para ver la info de los DF.
+"""Creo función para ver los valores únicos de cada columna en el dF.
 """
-def info_df(df):
-    return df.info()
+def valores_unicos(df):
+    for columna in df.columns:
+        print(f"La distribución de las categorías para la columna {columna.upper()}:")
+        print(df[columna].value_counts())
+
 
 """Creo función para ver los principales estadísticos de las columnas numéricas.
 """
@@ -37,11 +45,6 @@ def estadisticos_numericos(df):
 def estadisticos_categoricos(df):
     return df.describe(include='O').T
 
-"""Creo función para ver los valores nulos.
-"""
-def nulos(df):
-    return df.isnull().sum()
-
 """Creo función para ver si hay valores duplicados y si los hay comprobar que tengan sentido.
 """
 def duplicados(df):
@@ -49,14 +52,18 @@ def duplicados(df):
         duplicados_en_columna = df[columna].duplicated().sum()
         print(f"Duplicados en la columna '{columna.upper()}': {duplicados_en_columna}")
 
+"""Creo función para ver los valores nulos.
+"""
+def nulos(df):
+    return df.isnull().sum()
+
 """Creo función para buscar el porcentaje de nulos numéricos que tengo en las columnas porque en ninguno 
 de los dos csv hay nulos categóricos.
 """
 def nulos_numericos(df):
     columnas_con_nulos = df.columns[df.isnull().any()].tolist()
     print("Porcentaje de nulos numéricos por columna:")
-    print(df[columnas_con_nulos].isnull().sum() / df.shape[0] * 100)
-    print('.....................................................')
+    print(df[columnas_con_nulos].isnull().sum() / df.shape[0] * 100)    
     return columnas_con_nulos
 
 """Creo función para ver cómo se distribuyen los valores únicos en esas columnas.
@@ -65,7 +72,12 @@ def distribucion_valores (df, columnas):
     for columna in columnas:
         print(f"La distribución de las categorías para la columna {columna.upper()}")
         print(df[columna].value_counts() / df.shape[0])
-        print("--------------------------------------------------")
+
+"""Creo función para eliminar columna 'Country' que solo tiene un valor.'
+"""
+def eliminar_columnas(df, columna):
+    df.drop(columna, axis=1, inplace=True)
+
 
 """Creo función para eliminar las columnas Cancellation Year y Cancellation Month ya que tienen un 88% de nulos.
 """
@@ -93,10 +105,10 @@ def quitar_negativos(df, columna):
 """Creo función para calcular la media y la mediana a la columna Salary.
 """
 def media_mediana (df, columna):
-    print(f'La media de la columna {columna} es:')
+    print(f'La MEDIA de la columna {columna.upper()} es:')
     media = df[columna].mean()
     print(media)
-    print(f'La mediana de la columna {columna} es:')
+    print(f'La MEDIANA de la columna {columna.upper()} es:')
     mediana = df[columna].median()
     print(mediana)
 
@@ -125,11 +137,6 @@ def igualar_columnas(df):
 def cambiar_tipo(df, columna):
     df[columna]=df[columna].astype(float)
     return df
-
-"""Creo función para eliminar columna 'Country' que solo tiene un valor.'
-"""
-def eliminar_columnas(df, columna):
-    df.drop(columna, axis=1, inplace=True)
 
 
 """Creo función para guardar el DF resultante en la carpeta output_data.
