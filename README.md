@@ -4,7 +4,7 @@
 
 En esta evaluación, se ha automatizado la primera fase del proceso de Transformación y Limpieza de datos para crear un archivo CSV combinado llamado 'customer_combined', utilizando como fuente dos archivos CSV
 
-### Estructura de archivos**
+### Estructura de archivos
 **Data**
 - Archivos CSV de entrada:
     - Customer Flight Activity.csv
@@ -30,5 +30,5 @@ Archivos markdown:
 Los archivos 'Customer Flight Activity.csv' y 'Customer Loyalty History.csv' se utilizan como entrada para el proceso de combinación y limpieza de datos. El archivo resultante, 'customer_combined.csv', contiene los datos combinados de los clientes que forman parte del programa de fidelización de la compañía de vuelos, listos para análisis posteriores.
 
 ### Ejecución
-Para ejecutar el proceso ETL de la primera fase, asegúrate de tener instalado Python. Desde la línea de comandos, puedes ejecutar: python main_ETL.py
+Para ejecutar el proceso ETL de la primera fase, desde la línea de comandos, puedes ejecutar: python main_ETL.py
 
