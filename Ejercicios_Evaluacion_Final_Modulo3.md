@@ -13,13 +13,13 @@
 
 
 ### Fase 2: Visualización
-Usando las herramientas de visualización que has aprendido duranteeste módulo, contesta a las siguientes gráficas usando la mejor gráficaque consideres:
+Usando las herramientas de visualización que has aprendido durante este módulo, contesta a las siguientes cuestiones usando la mejor gráfic aque consideres:
 
-**1. ¿Cómo se distribuye la cantidad de vuelos reservados pormes durante el año?**
-**2. ¿Existe una relación entre la distancia de los vuelos y lospuntos acumulados por los clientes?**
-**3. ¿Cuál es la distribución de los clientes por provincia oestado?**
-**4. ¿Cómo se compara el salario promedio entre los diferentesniveles educativos de los clientes?**
-**5. ¿Cuál es la proporción de clientes con diferentes tipos detarjetas de fidelidad?**
+**1. ¿Cómo se distribuye la cantidad de vuelos reservados por mes durante el año?**
+**2. ¿Existe una relación entre la distancia de los vuelos y los puntos acumulados por los clientes?**
+**3. ¿Cuál es la distribución de los clientes por provincia o estado?**
+**4. ¿Cómo se compara el salario promedio entre los diferentes niveles educativos de los clientes?**
+**5. ¿Cuál es la proporción de clientes con diferentes tipos de tarjetas de fidelidad?**
 **6. ¿Cómo se distribuyen los clientes según su estado civil y género?**
 
 ### Fase 3: Evaluación de Diferencias en Reservas de Vuelos por NivelEducativo
