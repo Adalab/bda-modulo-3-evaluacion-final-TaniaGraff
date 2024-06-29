@@ -34,6 +34,19 @@ def valores_unicos(df):
         print(f"La distribución de las categorías para la columna {columna.upper()}:")
         print(df[columna].value_counts())
 
+"""Creo función para cambiar el tipo de la columna Points Redeemed y que sea float.
+"""
+def cambiar_tipo_float(df, columna):
+    df[columna]=df[columna].astype(float)
+    return df
+
+"""Creo función para cambiar el tipo de la columna Month y que sea object.
+"""
+def cambiar_mes_a_nombre (df, columna):
+    meses = {1: 'Enero', 2: 'Febrero', 3: 'Marzo', 4: 'Abril', 5: 'Mayo', 6: 'Junio',
+    7: 'Julio', 8: 'Agosto', 9: 'Septiembre', 10: 'Octubre', 11: 'Noviembre', 12: 'Diciembre'}
+    df[columna] = df[columna].map(meses)
+    return df
 
 """Creo función para ver los principales estadísticos de las columnas numéricas.
 """
@@ -44,13 +57,6 @@ def estadisticos_numericos(df):
 """
 def estadisticos_categoricos(df):
     return df.describe(include='O').T
-
-"""Creo función para ver si hay valores duplicados y si los hay comprobar que tengan sentido.
-"""
-def duplicados(df):
-    for columna in df.columns:
-        duplicados_en_columna = df[columna].duplicated().sum()
-        print(f"Duplicados en la columna '{columna.upper()}': {duplicados_en_columna}")
 
 """Creo función para ver los valores nulos.
 """
@@ -132,12 +138,16 @@ def igualar_columnas(df):
     df.columns = df.columns.str.replace(' ', '_')
     return df
 
-"""Creo función para cambiar el tipo de la columna Points Redeemed y que sea float.
+"""Creo función para ver si hay valores duplicados y si los hay comprobar que tengan sentido.
 """
-def cambiar_tipo(df, columna):
-    df[columna]=df[columna].astype(float)
-    return df
+def duplicados(df):
+    return df.duplicated().sum()
 
+"""Creo función para analizar los duplicados encontrados.
+"""
+def analisis_duplicados(df):
+    duplicados = df[df.duplicated()]
+    return duplicados
 
 """Creo función para guardar el DF resultante en la carpeta output_data.
 """
