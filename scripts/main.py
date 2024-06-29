@@ -44,6 +44,9 @@ print('La INFORMACIÓN del DataFrame del HISTORIAL CLIENTES es:\n')
 soporte.info_df(df_historial_clientes)
 print('.....................................................')
 
+#Llamo a la función para cambiar el tipo de la columna Enrollment Month y que sea igual que Month.
+soporte.cambiar_mes_a_nombre(df_historial_clientes, 'Enrollment Month')
+
 #Llamo a la función para ver los valores únicos del DF HISTORIAL CLIENTES.
 soporte.valores_unicos(df_historial_clientes)
 print('.....................................................')
