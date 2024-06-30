@@ -101,8 +101,9 @@ print(df_historial_clientes.isnull().sum())
 
 print('___________________UNIÓN DATAFRAMES_________________')
 
-#Llamo a la función para unir los dos DF usando inner, así me quedaré con los registros de los clientes que tengan actividad registrada (que estén en las dos tablas).
-df_clientes= soporte.unir_df(df_actividad_clientes, df_historial_clientes, on_column='Loyalty Number', how='inner')
+#Llamo a la función para unir los dos DF usando un merge left para quedarme con todos los registros de clientes aun cuando no tengan una actividad registrada.
+#De este modo se podrá analizar el comportamiento de todos ellos e identificar, en caso de que fuera necesario, porqué esos clientes inactivos no han registrado ninguna actividad.
+df_clientes= soporte.unir_df(df_actividad_clientes, df_historial_clientes, on_column='Loyalty Number', how='left')
 print(df_clientes.head())
 
 #Llamo a la función para igualar los nombres de las columnas.
@@ -129,16 +130,19 @@ print(duplicados)
 print('__________________________________OBSERVACIONES___________________________________')
 
 print("""El DataFrame CLIENTES resultante contiene información de los clientes canadienses
-que forman parte del programa de fidelización de la compañía aérea. Clientes de los que se mantiene un
-registro de sus vuelos, de los puntos que acumula con cada vuelo y de los puntos canjeados 
-o no hasta el momento entre otros datos de interés.
+que forman parte del programa de fidelización de la compañía aérea. Clientes de los que se 
+mantiene un registro de su actividad: de los vuelos o no que reserva, de los puntos o no que 
+acumula con cada vuelo y de los puntos canjeados o no hasta el momento entre otros muchos 
+datos de interés.
 
 El DataFrame CLIENTES es un DataFrame que no contiene valores nulos y que presenta valores 
-duplicados que se han considerado oportuno mantener (al trabajar con datos de transacciones
+duplicados que se han considerado oportuno mantener. Al trabajar con datos de transacciones
 de clientes es normal que aparezcan este tipo de duplicados, ya que cada registro representa
 la actividad que los clientes han mantenido a lo largo de los meses y años que llevan formando 
-parte del programa de fidelización). El DataFrame CLIENTES resultante tiene un total de 405624 
-registros y 22 columnas.""")
+parte del programa de fidelización. Incluso habiendo registros totalmente iguales no podríamos
+descartarlos ya que nos faltan datos como el identificador único de compra, el día o la hora 
+de la compra para poder hacerlo con mayor seguridad. Es por ello que el DataFrame CLIENTES 
+resultante tiene un total de 405624 registros y 22 columnas.""")
 
 print('__________________________ALMACENAMIENTO DATAFRAME CLIENTES________________________')
 

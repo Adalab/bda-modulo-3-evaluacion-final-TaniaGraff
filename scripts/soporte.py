@@ -126,10 +126,10 @@ def imputar_mediana(df, columna):
     df[columna].fillna(mediana, inplace=True)
     return df
 
-"""Creo función para unir los dos DF usando merge_inner.
+"""Creo función para unir los dos DF usando merge_left.
 """
 def unir_df(df1, df2, on_column=None, how='inner'):
-    df_merged_inner = pd.merge(df1, df2, on=on_column, how='inner')
+    df_merged_inner = pd.merge(df1, df2, on=on_column, how='left')
     return df_merged_inner
 
 """Creo función para igualar nombres columnas con un guión bajo.
