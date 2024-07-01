@@ -72,7 +72,7 @@ columnas_nulos_numericos = soporte.nulos_numericos(df_historial_clientes)
 columnas_nulos_numericos
 print('.....................................................')
 
-#Llamo a la función para ver como se distribuyen los valores dentro de estas categórias, para ver si puedo imputar los nulos numéricos.
+#Llamo a la función para ver como se distribuyen los valores dentro de estas categórias, y tratar de imputar los nulos numéricos.
 print('La distribución de los valores únicos en las COLUMNAS CON NULOS NUMÉRICOS es de:\n')
 soporte.distribucion_valores(df_historial_clientes, columnas_nulos_numericos)
 print('.....................................................')
@@ -140,9 +140,9 @@ duplicados que se han considerado oportuno mantener. Al trabajar con datos de tr
 de clientes es normal que aparezcan este tipo de duplicados, ya que cada registro representa
 la actividad que los clientes han mantenido a lo largo de los meses y años que llevan formando 
 parte del programa de fidelización. Incluso habiendo registros totalmente iguales no podríamos
-descartarlos ya que nos faltan datos como el identificador único de compra, el día o la hora 
-de la compra para poder hacerlo con mayor seguridad. Es por ello que el DataFrame CLIENTES 
-resultante tiene un total de 405624 registros y 22 columnas.""")
+descartarlos ya que nos faltan datos como el identificador único de reserva de vuelo, y el día 
+o la hora en la que se realizó la reserva para poder hacerlo con mayor seguridad. Es por ello 
+que el DataFrame CLIENTES resultante tiene un total de 405624 registros y 22 columnas.""")
 
 print('_________________   ALMACENAMIENTO DATAFRAME CLIENTES   ________________________')
 
