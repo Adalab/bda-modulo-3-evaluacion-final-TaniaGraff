@@ -16,10 +16,15 @@
 Usando las herramientas de visualización que has aprendido durante este módulo, contesta a las siguientes cuestiones usando la mejor gráfica que consideres:
 
 **1. ¿Cómo se distribuye la cantidad de vuelos reservados por mes durante el año?**
+
 **2. ¿Existe una relación entre la distancia de los vuelos y los puntos acumulados por los clientes?**
+
 **3. ¿Cuál es la distribución de los clientes por provincia o estado?**
+
 **4. ¿Cómo se compara el salario promedio entre los diferentes niveles educativos de los clientes?**
+
 **5. ¿Cuál es la proporción de clientes con diferentes tipos de tarjetas de fidelidad?**
+
 **6. ¿Cómo se distribuyen los clientes según su estado civil y género?**
 
 ### Fase 3: Evaluación de Diferencias en Reservas de Vuelos por NivelEducativo
@@ -27,7 +32,9 @@ Utilizando un conjunto de datos que hemos compartido, se busca evaluar si existe
 
 **1. Preparación de Datos:**
 Filtra el conjunto de datos para incluir únicamente las columnas relevantes: 'Flights Booked' y 'Education'.
+
 **2. Análisis Descriptivo:**
 Agrupa los datos por nivel educativo y calcula estadísticas descriptivas básicas (como el promedio, la desviación estandar, los percentiles) del número de vuelos reservados para cada grupo.
+
 **3. Prueba Estadística:**
 Realiza una prueba de hipótesis para determinar si existe una diferencia significativa en el número de vuelos reservados entre los diferentes niveles educativos.
