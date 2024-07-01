@@ -21,8 +21,8 @@ Y se ha realizado una prueba de hipótesis para comprobar si existe o no una rel
 customer_combined.csv
 
 **Scripts**
-- main.py: Script principal que ejecuta la automatización del proceso ETL.
-- soporte.py: Archivo de soporte donde se definen las funciones utilizadas en el proceso ETL.
+- main.py. Script principal que ejecuta la automatización del proceso ETL.
+- soporte.py. Archivo de soporte donde se definen las funciones utilizadas en el proceso ETL.
 
 **Jupyternotes**
 
