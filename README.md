@@ -6,7 +6,7 @@
 
 En esta evaluación se han explorado, limpiado y transformado dos archivos de datos (.csv) que contienen información sobre los clientes canadienses adscritos al programa de fidelización de una compañía aérea.
 
-Se ha automatizado la primera fase del proceso de Transformación y Limpieza de datos para crear un archivo .csv combinado llamado 'customer_combined'.
+Se ha automatizado la primera fase del proceso de transformación y limpieza de datos para crear un archivo .csv combinado llamado 'customer_combined'.
 
 Se han utilizado diferentes herramientas de visualización para responder a algunas cuestiones relacionadas con el comportamiento de los clientes y su distribución por sexo, estado civil o lugar de procedencia, entre otros.
 
