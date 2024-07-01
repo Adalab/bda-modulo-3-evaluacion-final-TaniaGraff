@@ -1,8 +1,16 @@
 # Evaluación Final Módulo 3 
-## Análisis exploratorio de los datos de los clientes de una compañía aérea.
+## Análisis exploratorio de los datos del programa de fidelización de una compañía aérea.
 **Tania Graff** | Promo A Part Time
 
-En esta evaluación, se ha automatizado la primera fase del proceso de Transformación y Limpieza de datos para crear un archivo CSV combinado llamado 'customer_combined', utilizando como fuente dos archivos CSV
+![imagen_portada_modulo](portada.png)
+
+En esta evaluación se han explorado, limpiado y transformado dos archivos de datos (.csv) que contienen información sobre los clientes canadienses adscritos al programa de fidelización de una compañía aérea.
+
+Se ha automatizado la primera fase del proceso de Transformación y Limpieza de datos para crear un archivo .csv combinado llamado 'customer_combined'.
+
+Se han utilizado diferentes herramientas de visualización para responder a algunas cuestiones relacionadas con el comportamiento de los clientes y su distribución por sexo, estado civil o lugar de procedencia, entre otros.
+
+Y se ha realizado una prueba de hipótesis para comprobar si existe o no una relación entre el número de vuelos reservados y el nivel de estudios de los clientes.
 
 ### Estructura de archivos
 **Data**
@@ -18,7 +26,8 @@ customer_combined.csv
 
 **Jupyternotes**
 
-Jupyter Notebook utilizado para realizar visualizaciones, análisis exploratorios avanzados y A/B testing.
+- fase2. Jupyter Notebook con gráficos y visualizaciones de datos.
+- fase 3. Jupyter Notebook con análisis exploratorios avanzados y A/B testing.
 
 **MD**
 
@@ -30,5 +39,5 @@ Archivos markdown:
 Los archivos 'Customer Flight Activity.csv' y 'Customer Loyalty History.csv' se utilizan como entrada para el proceso de combinación y limpieza de datos. El archivo resultante, 'customer_combined.csv', contiene los datos combinados de los clientes que forman parte del programa de fidelización de la compañía de vuelos, listos para análisis posteriores.
 
 ### Ejecución
-Para ejecutar el proceso ETL de la primera fase, desde la línea de comandos, puedes ejecutar: python main_ETL.py
+Para realizar el proceso ETL de la primera fase, ejecutar desde la línea de comandos: python soporte.py | python main.py
 
