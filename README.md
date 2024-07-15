@@ -27,7 +27,7 @@ customer_combined.csv
 **Jupyternotes**
 
 - fase2. Jupyter Notebook con gráficos y visualizaciones de datos.
-Añado link a dashboard creado con Tableau: [text](https://public.tableau.com/views/visualizacion_datos_clientes_compania_aerea/FlightActivityCanadianCustomers?:language=es-ES&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
+Las visualizaciones de los datos de los clientes también se pueden consultar desde este dashboard creado con Tableau: [text](https://public.tableau.com/views/visualizacion_datos_clientes_compania_aerea/FlightActivityCanadianCustomers?:language=es-ES&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
 - fase 3. Jupyter Notebook con análisis exploratorios avanzados y A/B testing.
 
 **MD**
